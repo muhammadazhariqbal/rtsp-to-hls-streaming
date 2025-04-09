@@ -17,7 +17,7 @@ if [ -n "$NGROK_URL" ]; then
   echo "=================================================="
   echo "🌐 Public HLS Stream URL: ${NGROK_URL}/stream.m3u8"
   echo "=================================================="
-  echo "${NGROK_URL}/stream.m3u8" > /app/ngrok-url.txt
+  echo "${NGROK_URL}/stream.m3u8" > /app/output/ngrok-url.txt
 else
   echo "Failed to retrieve ngrok URL. Check /app/ngrok.log for details."
 fi
