@@ -26,9 +26,10 @@ COPY entrypoint.sh /app/entrypoint.sh
 COPY handle-ffmpeg.sh /app/handle-ffmpeg.sh
 COPY handle-server.sh /app/handle-server.sh
 COPY handle-ngrok.sh /app/handle-ngrok.sh
+COPY handle-record.sh /app/handle-record.sh
 
 # Make scripts executable
-RUN chmod +x /app/entrypoint.sh /app/handle-ffmpeg.sh /app/handle-server.sh /app/handle-ngrok.sh
+RUN chmod +x /app/entrypoint.sh /app/handle-ffmpeg.sh /app/handle-server.sh /app/handle-ngrok.sh /app/handle-record.sh
 
 # Expose HTTP server port
 EXPOSE 8081

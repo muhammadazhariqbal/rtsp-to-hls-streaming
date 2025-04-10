@@ -15,6 +15,10 @@ echo "Starting FFmpeg processing..."
 /app/handle-ffmpeg.sh &
 FFMPEG_PID=$!
 
+# Start MP4 recording
+/app/handle-record.sh &
+RECORD_PID=$!
+
 # Wait a moment to ensure FFmpeg starts properly
 sleep 2
 
