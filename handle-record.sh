@@ -1,7 +1,7 @@
 #!/bin/bash
 
 RTSP_URL=${RTSP_URL:-"rtsp://host.docker.internal:8554/mystream"}
-SEGMENT_TIME=${SEGMENT_TIME:-240}  # 4 minutes
+SEGMENT_TIME=${SEGMENT_TIME:-1200}  # 4 minutes
 
 echo "📼 Recording segments from: $RTSP_URL"
 echo "⏱️ Segment duration: $SEGMENT_TIME seconds"
