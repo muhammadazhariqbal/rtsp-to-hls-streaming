@@ -15,8 +15,9 @@ mkdir -p /app/recordings
 # Start FFmpeg to record RTSP stream into 20-minute segments (or custom time)
 exec ffmpeg -rtsp_transport tcp \
     -i "$RTSP_URL" \
-    -c copy \
+    -c:v libx264 -c:a aac \
     -f segment \
     -segment_time "$SEGMENT_TIME" \
     -reset_timestamps 1 \
     /app/recordings/recording_%03d.mp4
+
