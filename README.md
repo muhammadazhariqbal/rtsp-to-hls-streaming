@@ -312,9 +312,13 @@ With volume for persistent storage:
 
 ```bash
 docker run -p 8081:8081 -p 4040:4040 \
-  -e NGROK_AUTHTOKEN=your_ngrok_auth_token \
-  -v $(pwd)/stream-output:/app/output \
+  -e NGROK_AUTHTOKEN="your_token_here" \
+  -e RTSP_URL="your_rtsp_url_here" \
+  -e SEGMENT_TIME=240 \
+  -v "$(pwd)/output:/app/output" \
+  -v "$(pwd)/recordings:/app/recordings" \
   rtsp-hls-streamer
+
 ```
 
 ## Configuration Options
